@@ -5,7 +5,7 @@ test("searching for pliers returns only products with pliers in the name", async
 }) => {
   await page.goto("https://practicesoftwaretesting.com");
 
-  await page.getByRole("textbox", { name: "Search" }).fill("hammer");
+  await page.getByRole("textbox", { name: "Search" }).fill("pliers");
   await page.getByRole("button", { name: "Search" }).click();
 
   await expect(page.getByText("Searched for: pliers")).toBeVisible();
