@@ -77,3 +77,18 @@ Run these steps in order from a terminal.
 - I will later add the `src/ts-basics/` files because I was using a single index file to code along with the instructor.
 
 Run it with `npx tsx src/profile-validator.ts`.
+
+## Toolshop test suite
+
+Playwright UI and API tests for https://practicesoftwaretesting.com.
+
+### Setup and run
+
+1. Install: `npm install`, then `npx playwright install chromium`
+2. Copy the environment file: `copy .env.example .env` (Windows) or `cp .env.example .env` (Mac/Linux)
+3. Run the tests: `npm test`
+
+### What's in the suite
+- UI tests: home page title, product search (through the `HomePage` page object) and invalid login.
+- API tests: create a cart and add a product, and request a cart that doesn't exist (404). Carts created by a test are deleted afterwards.
+- The Gherkin feature file in `features/` describes the cart behaviour. It is not automated.
